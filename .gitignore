@@ -1,0 +1,21 @@
+# Plugin directories (managed by lazy.nvim)
+lazy-lock.json
+
+# Neovim data
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.swp
+*.swo
+*~
+
+# Session files
+.session.vim
+Session.vim
+
+# Any local-only configs
+local.lua
