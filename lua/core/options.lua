@@ -4,6 +4,7 @@ vim.o.mouse = 'a' -- Enable mouse mode
 vim.o.clipboard = 'unnamedplus' -- Sync clipboard between OS and Neovim.
 vim.g.have_nerd_font = true
 vim.o.breakindent = true -- Enable break indent
+vim.opt.showbreak = '↪ ' -- Show symbol at the start of wrapped lines (optional)
 vim.o.undofile = true -- Save undo history
 vim.o.ignorecase = true -- Case-insensitive searching UNLESS \C or capital in search
 vim.o.smartcase = true -- smart case
@@ -15,7 +16,7 @@ vim.o.writebackup = false -- if a file is being edited by another program (or wa
 vim.o.completeopt = 'menuone,noselect' -- Set completeopt to have a better completion experience
 vim.opt.termguicolors = true -- set termguicolors to enable highlight groups
 vim.o.whichwrap = 'bs<>[]hl' -- which "horizontal" keys are allowed to travel to prev/next line
-vim.o.wrap = false -- display lines as one long line
+vim.o.wrap = true -- do not display lines as one long line
 vim.o.linebreak = true -- companion to wrap don't split words
 vim.o.scrolloff = 4 -- minimal number of screen lines to keep above and below the cursor
 vim.o.sidescrolloff = 8 -- minimal number of screen columns either side of cursor if wrap is `false`
@@ -42,3 +43,6 @@ vim.opt.shortmess:append 'c' -- don't give |ins-completion-menu| messages
 vim.opt.iskeyword:append '-' -- hyphenated words recognized by searches
 vim.opt.formatoptions:remove { 'c', 'r', 'o' } -- don't insert the current comment leader automatically for auto-wrapping comments using 'textwidth', hitting <Enter> in insert mode, or hitting 'o' or 'O' in normal mode.
 vim.opt.runtimepath:remove '/usr/share/vim/vimfiles' -- separate vim plugins from neovim in case vim still in use
+vim.opt.colorcolumn = '80,120' -- To set a ruler at 80 and 120
+vim.opt.sidescroll = 0 -- Disable horizontal scrolling
+vim.opt.sidescrolloff = 0 -- Don't keep columns visible when scrolling
